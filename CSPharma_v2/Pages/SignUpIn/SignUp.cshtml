@@ -1,0 +1,21 @@
+﻿@page
+@model CSPharma_v2.Pages.SignUpIn.SignUpModel
+@{
+}
+
+<div class="row mt-5">
+    <div class="col-sm-4 offset-sm-4">
+        <form>
+            <div class="form-group">
+                <label for="InputUSER">User</label>
+                <input class="form-control" id="exampleInputEmail1" placeholder="ABDDY34" maxlength="7" required>
+            </div>
+            <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="pwdWarning" placeholder="Password" minlength="8" maxlength="16" required>
+                <small id="pwdWarning" class="form-text text-muted">We'll never share your password with anyone else.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
