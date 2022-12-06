@@ -20,3 +20,40 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.button {
+    border-color: #5dc1b9;
+    color: #5dc1b9;
+    background-color: #ffffff;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    border-radius: 30%;
+    border-style: double;
+}
+
+.div {
+    background-color: #5ccb5f;
+}
+
+.headerLetters {
+    color: #ffffff;
+}
+
+.letters {
+    color: #090909;
+}
+
+.infoMessages {
+    color: #090909;
+    background-color: #fed353;
+}
+
+.body {
+    background-color: #ffffff;
+}
+
+.backgroundHeader {
+    background-color: #5ccb5f;
+}

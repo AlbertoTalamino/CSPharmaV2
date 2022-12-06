@@ -1,4 +1,58 @@
 ﻿@page
 @model CSPharma_v2.Pages.SignUpIn.SignInModel
 @{
+    Layout = "";
 }
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body class="body">
+    <img src="~/img/Logo.png" />
+    <h2 style="text-align:center">Access</h2>
+    <form method="post">
+        <div class="letters">
+            <br /><br />        
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4 col-form-label">User</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4">
+                    <input class="form-control" id="inputUser" name="inputUser" placeholder="User Name" maxlength="7" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4 col-form-label">Password</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" id="inputPwd" name="inputPwd" placeholder="Password" maxlength="16" required>
+                    <small id="pwdWarning" class="form-text text-muted">We'll never share your password with anyone else.</small>
+                </div>
+            </div>
+
+            <br /><br />
+            <div class="form-group row">
+                <label class="col-sm-5 col-form-label"></label>
+                <div class="col-sm-4">
+                    <button type="submit" class="button" asp-page-handler="Submit">Log in</button>
+                </div>
+            </div>
+            
+            <br /><br />
+            <div class="form-group row ">
+                <label class="col-sm-4 col-form-label"></label>               
+                <div class="col-sm-4">
+                    New to CSPharma? <a asp-area="" asp-page="/SignUpIn/SignUp">Sing Up</a>
+                </div>
+            </div>
+    </form>
+</body>
