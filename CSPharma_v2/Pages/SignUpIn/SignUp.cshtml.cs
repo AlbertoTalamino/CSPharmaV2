@@ -8,29 +8,22 @@ namespace CSPharma_v2.Pages.SignUpIn
     {
         public DAL.Models.CspharmaInformationalContext db = new DAL.Models.CspharmaInformationalContext();
 
-        public void OnGet(string user, string pwd)
-        {
-            var employeeUser = db.DlkCatAccEmployees.Where(e => e.CodEmployee == user).FirstOrDefault();
-            var employeePwd = db.DlkCatAccEmployees.Where(e => e.KeyEmployee == pwd).FirstOrDefault();
+        [BindProperty]
+        public string inputUser { get; set; }
+        [BindProperty]
+        public string inputPwd1 { get; set; }
 
-            if (employeeUser != null && employeePwd != null)
-            {
-                
-            }
+
+        public void OnGet()
+        {
 
         }
 
-        //[HttpPost]
-        //public IActionResult Index(string user, string pwd)
-        //{
-        //    var employeeUser = db.DlkCatAccEmployees.Where(e => e.CodEmployee == user).FirstOrDefault();
-        //    var employeePwd = db.DlkCatAccEmployees.Where(e => e.CodEmployee == user).FirstOrDefault();
+        public void OnPostSubmit()
+        {
+            
+        }
 
-        //    if (employeeUser != null && employeePwd != null)
-        //    {
-
-        //    }
-   
-        //}
+        
     }
 }
