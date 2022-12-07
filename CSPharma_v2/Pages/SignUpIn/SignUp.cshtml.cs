@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CSPharma_v2.Pages.SignUpIn
@@ -21,7 +22,7 @@ namespace CSPharma_v2.Pages.SignUpIn
 
         public void OnPostSubmit()
         {
-            
+            db.DlkCatAccEmployees.Add(new DAL.Models.DlkCatAccEmployee(inputUser, inputPwd1));
         }
 
         

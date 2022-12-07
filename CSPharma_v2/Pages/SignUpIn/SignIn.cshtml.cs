@@ -22,14 +22,18 @@ namespace CSPharma_v2.Pages.SignUpIn
         public IActionResult OnPostSubmit() 
         {
             var employeeUser = db.DlkCatAccEmployees.Where(e => e.CodEmployee == inputUser).FirstOrDefault();
-            var employeePwd = db.DlkCatAccEmployees.Where(e => e.CodEmployee == inputPwd).FirstOrDefault();
+            var employeePwd = db.DlkCatAccEmployees.Where(e => e.KeyEmployee == inputPwd).FirstOrDefault();
 
             if (employeeUser != null && employeePwd != null)
             {
-                return RedirectToPage("./Index");
+                return RedirectToPage("../Index");
+            }
+            else
+            {
+                return null;         
             }
 
-            return null;
+            
         }
     }
 }
