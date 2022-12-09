@@ -22,7 +22,12 @@ namespace CSPharma_v2.Pages.SignUpIn
 
         public IActionResult OnPostSubmit()
         {
-            db.DlkCatAccEmployees.Add(new DAL.Models.DlkCatAccEmployee(inputUser, inputPwd1));
+            //Instance of the employe class with the parameters collected by the view
+            DAL.DTOs.DTOEmployee employeeDTO = new DAL.DTOs.DTOEmployee(inputUser, inputPwd1);
+            //DTO to DAO
+            DAL.Models.DlkCatAccEmployee employeeDAO = DAL.ToDAOs.DTOEmployeeToDAO.DtoEmployeeToDao(employeeDTO);
+            //Insert
+            db.DlkCatAccEmployees.Add(employeeDAO);
             db.SaveChanges();
             return RedirectToPage("../Index");
         }

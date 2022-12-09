@@ -34,23 +34,4 @@ public partial class DlkCatAccEmployee
     /// Level of employee access.
     /// </summary>
     public short LevelAccessEmployed { get; set; }
-
-    public DlkCatAccEmployee(string codEmployee, string keyEmployee)
-    {
-        MdUuid = RamdomValue();
-        MdDate = DateTime.Today;
-        Id = Id;
-        CodEmployee = codEmployee;
-        KeyEmployee = keyEmployee;
-        LevelAccessEmployed = 2;
-    }
-
-
-    //Method that generate a random value for the field MdUuid       
-    string RamdomValue()
-    {
-        Random ran = new Random();
-        return ("A" + ran.Next());
-    }
-
 }
