@@ -38,12 +38,13 @@
                     <small id="pwdWarning" class="form-text text-muted">We'll never share your password with anyone else.</small>
                 </div>
             </div>
+            <br />
+            <p style="text-align:center; color: red;">@ViewData["warningMessage"]</p>
 
-            <br /><br />
             <div class="form-group row">
                 <label class="col-sm-5 col-form-label"></label>
                 <div class="col-sm-4">
-                    <button type="submit" class="button" asp-page-handler="Submit">Log in</button>
+                    <button type="submit" class="button" asp-page-handler="Submit">Log in</button>                    
                 </div>
             </div>
 

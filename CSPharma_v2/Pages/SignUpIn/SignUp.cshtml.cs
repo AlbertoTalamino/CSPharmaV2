@@ -23,6 +23,7 @@ namespace CSPharma_v2.Pages.SignUpIn
         public void OnPostSubmit()
         {
             db.DlkCatAccEmployees.Add(new DAL.Models.DlkCatAccEmployee(inputUser, inputPwd1));
+            db.SaveChanges();
         }
 
         

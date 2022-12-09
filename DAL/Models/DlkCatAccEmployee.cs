@@ -39,7 +39,7 @@ public partial class DlkCatAccEmployee
     {
         MdUuid = RamdomValue();
         MdDate = DateTime.Today;
-        Id = 2;
+        Id = Id;
         CodEmployee = codEmployee;
         KeyEmployee = keyEmployee;
         LevelAccessEmployed = 2;

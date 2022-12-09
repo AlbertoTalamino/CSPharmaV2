@@ -15,6 +15,7 @@ namespace CSPharma_v2.Pages.SignUpIn
         public string inputPwd { get; set; }
 
 
+
         public void OnGet()
         {
         }
@@ -24,13 +25,16 @@ namespace CSPharma_v2.Pages.SignUpIn
             var employeeUser = db.DlkCatAccEmployees.Where(e => e.CodEmployee == inputUser).FirstOrDefault();
             var employeePwd = db.DlkCatAccEmployees.Where(e => e.KeyEmployee == inputPwd).FirstOrDefault();
 
+            ViewData["warningMessage"] = " ";
+
             if (employeeUser != null && employeePwd != null)
             {
                 return RedirectToPage("../Index");
             }
             else
             {
-                return null;         
+                ViewData["warningMessage"] = "ERROR (The user doesn't exits)!";
+                return null;     
             }
 
             
