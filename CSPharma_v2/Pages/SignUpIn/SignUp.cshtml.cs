@@ -20,10 +20,11 @@ namespace CSPharma_v2.Pages.SignUpIn
 
         }
 
-        public void OnPostSubmit()
+        public IActionResult OnPostSubmit()
         {
             db.DlkCatAccEmployees.Add(new DAL.Models.DlkCatAccEmployee(inputUser, inputPwd1));
             db.SaveChanges();
+            return RedirectToPage("../Index");
         }
 
         
